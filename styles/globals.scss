@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@keyframes loaderring {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  &:before{
+    content:'';
+    content: "";
+    width: 100%;
+    height: 100vh;
+    //background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
+    // background: #D3D3D3;
+    background-image: url("../public/bg.jpg");
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.text-shadow{
+  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+}
+
+.adjacent-post{
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+  }
+  &:hover{
+    & .arrow-btn{
+      width: 60px;
+    }
+  }
+}
+
+.react-multi-carousel-list {
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+    &:hover{
+      width: 60px;
+    }
+  }
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.loader--ellipsis {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 60px;
+}
+
+.loader--ellipsis div {
+  background: #000;
+  position: absolute;
+  top: 5px;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.loader--ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: loader--ellipsis1 0.6s infinite;
+}
+
+.loader--ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: loader--ellipsis2 0.6s infinite;
+}
+
+.loader--ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: loader--ellipsis2 0.6s infinite;
+}
+
+.loader--ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: loader--ellipsis3 0.6s infinite;
+}
+
+@keyframes loader--ellipsis1 {
+  0% {
+      transform: scale(0);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes loader--ellipsis3 {
+  0% {
+      transform: scale(1);
+  }
+
+  100% {
+      transform: scale(0);
+  }
+}
+
+@keyframes loader--ellipsis2 {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  100% {
+      transform: translate(19px, 0);
+  }
+}
