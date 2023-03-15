@@ -5,8 +5,9 @@ import { getCategories, getCategoryPost } from '../../services';
 import PostCard from '../../components/PostCard';
 import Categories from '../../components/Categories';
 import Loader from '../../components/Loader';
+import { DirectPostResult, PostCardProps } from '../../utils/interfaces';
 
-const CategoryPost = ({ posts }) => {
+const CategoryPost = ({ posts }: { posts: DirectPostResult[] }) => {
 	const router = useRouter();
 
 	if (router.isFallback) {
