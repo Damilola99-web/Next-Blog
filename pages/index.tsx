@@ -24,7 +24,7 @@ const Home = ({ posts }: IndexProps) => {
 		);
 	} else {
 		return (
-			<div className='container mx-auto px-10 mb-8'>
+			<div className='lg:container mx-auto px-5 md:px-10 mb-8'>
 				<Head>
 					<title>Rashtech Blog</title>
 					<link
